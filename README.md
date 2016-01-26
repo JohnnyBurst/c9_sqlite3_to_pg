@@ -6,8 +6,8 @@ After logging into Cloud9, create a new rails app. Cloud9 will provision and set
 
 Once in the rails app, open up your gem file and replace gem 'sqlite3' with gem 'pg'.
 
-Install the gem pg via command line: gem install pg
-Via command line, run: bundle install and then bundle update
+Install the gem pg via command line: gem install pg.
+Now run: bundle install and then bundle update
 
 In the  Config folder, open database.yml
 Under default: &default, edit the entries to match below:
