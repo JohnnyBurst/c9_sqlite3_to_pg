@@ -10,22 +10,27 @@ Install the gem pg via command line: gem install pg.</br>
 Now run: bundle install and then bundle update</br>
 
 In the  Config folder, open database.yml</br>
-Under default: &default, edit the entries to match below:</br>
-adapter: postgresql</br>
-encoding: SQL_ASCII</br>
-host: localhost</br>
-pool: 5</br>
-username: ubuntu</br>
-password: (your password)</br>
-
-Edit Development database</br>
-database: app_development</br>
-
-Edit Test database</br>
-database: app_test</br>
+Copy/paste the below code, changing just the password to match the password for your database</br>
+default: &default</br>
+  adapter: postgresql</br>
+  encoding: SQL_ASCII</br>
+  host: localhost</br>
+  pool: 5</br>
+  username: ubuntu</br>
+  password: password</br>
 </br>
-Edit Production database</br>
-database: app_production</br>
+development:</br>
+  <<: *default</br>
+  database: app_development</br>
+</br>
+test:</br>
+  <<: *default</br>
+  database: app_test</br>
+</br>
+production:</br>
+  <<: *default</br>
+  database: app_production</br>
+</br>
 </br>
 Ctrl+s to save the file.</br>
 
