@@ -17,7 +17,7 @@ default: &default</br>
   host: localhost</br>
   pool: 5</br>
   username: ubuntu</br>
-  password: password</br>
+  password:  (yourpassword)</br>
 </br>
 development:</br>
   <<: *default</br>
